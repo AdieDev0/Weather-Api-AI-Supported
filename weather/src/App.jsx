@@ -6,6 +6,8 @@ const App = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
 
+
+  // FETCHING WEATHER AXIOS
   const fetchWeather = async () => {
     const apiKey = '3a534fa9d85d40d5856200336241710';
     const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
